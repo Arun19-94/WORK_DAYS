@@ -1,0 +1,94 @@
+body {
+    margin: 0;
+    font-family: "Lato", sans-serif;
+  }
+  
+  .sidebar {
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: #1a1540;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+  }
+  
+  .sidebar .a {
+    display: block !important;
+    color: #f1e1e1;
+    padding: 16px !important;
+    text-decoration: none;
+  }
+   
+ 
+  
+  .sidebar .a:hover {
+    background-color: #b9afaf;
+    color: #1a1540;
+    border-color: #000
+    
+  }
+  
+  div.content {
+    margin-left: 200px;
+    padding: 1px 16px;
+    height: 1000px;
+  }
+  
+  @media screen and (max-width: 700px) {
+    .sidebar {
+      width: 100%;
+      height: auto;
+      position: relative;
+    }
+    .sidebar .a {float: left;}
+    div.content {margin-left: 0;}
+  }
+  
+  @media screen and (max-width: 400px) {
+    .sidebar .a {
+      text-align: center;
+      float: none;
+    }
+  }
+  .drop-icon {
+    top: 8px !important;
+  }
+  
+.sub_menu {
+    position: relative;
+    padding-left: 24px;
+}
+
+.sub_menu:hover {
+    // position: relative;
+    // padding-left: 24px;
+    background-color: #1a1540;
+    color: #f1e1e1;
+}
+  .material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    position:relative;
+    top: 3px;
+    font-style: normal;
+    font-size: 24px;  /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+  
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+  
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+  
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+  }

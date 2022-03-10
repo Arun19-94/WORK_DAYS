@@ -1,0 +1,45 @@
+<div class="sidebar">
+    <div class="a" href="/dashboard">
+        <div class="hov">
+            <mat-icon>dashboard</mat-icon> Dashboard 
+        </div>
+        
+    </div>
+    <div class="a" href="/dashboard">
+        <div class="hov"  (click)="toggeleTimer()">
+            <mat-icon>alarm</mat-icon> Time Card <mat-icon class="drop-icon"  *ngIf= !isTimeOpen >arrow_drop_down</mat-icon>
+            <mat-icon  class="drop-icon" *ngIf= isTimeOpen >arrow_drop_up</mat-icon>
+        </div>
+        <div *ngIf= isTimeOpen >
+            <div  href="/dashboard" class="sub_menu">
+                <mat-icon>add_alarm</mat-icon> PSA
+            </div>
+            <div href="/dashboard" class="sub_menu">
+                <mat-icon>assignment_late</mat-icon> Leave
+            </div>
+        </div>
+        
+    </div>
+    <div class="a" href="/dashboard">
+        <div class="hov"  >
+            <mat-icon (click)= "reroute('/user')">person</mat-icon> <span  (click)= "reroute('/user')">Users </span>
+            <mat-icon class="drop-icon"  *ngIf= !isUserOpen (click)="toggeleUser()">arrow_drop_down</mat-icon>
+            <mat-icon  class="drop-icon" *ngIf= isUserOpen (click)="toggeleUser()" >arrow_drop_up</mat-icon>
+        </div>
+        <div *ngIf= isUserOpen >
+            <div  href="/dashboard" class="sub_menu">
+                <mat-icon>group_work</mat-icon> User List
+            </div>
+            <div (click)="reroute('/user/hierarchy')" class="sub_menu">
+                <mat-icon>event</mat-icon> Hierachial
+            </div>
+        </div>
+        
+    </div>
+    <div class="a" href="/dashboard">
+        <div class="hov">
+            <mat-icon> map</mat-icon> Referal
+        </div>
+    </div>
+</div>
+
